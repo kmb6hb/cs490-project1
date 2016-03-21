@@ -28,8 +28,8 @@ public class customersFrame extends javax.swing.JFrame {
     public customersFrame(Controller controller) {
         this.customers_fields = new LinkedList<>();
         this.controller = controller;
-        customers_fields.add("ID");
         customers_fields.add("Name");
+        customers_fields.add("Phone");
         customers_fields.add("Address");
         initComponents();        
         populate_customer_table();
