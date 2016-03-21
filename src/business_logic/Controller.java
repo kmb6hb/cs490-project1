@@ -6,6 +6,7 @@
 package business_logic;
 
 import business_logic.CarSpec.carSize;
+import business_logic.Rental.rentStatus;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -108,10 +109,10 @@ public class Controller {
         Object[][] result = new Object[available_cars][6];
         int count = 0;
         for (Car car : cars) {
-           // if (car.getStatus() == ProductStatus.AVAILABLE) {
+        //    if (car.getStatus() != rentStatus.RENTED) {
                 Object[] car_array = {false, car.getID(), car.getMake(), car.getModel(), car.getYear(), car.getSize()};
                 result[count++] = car_array;
-          //  }
+        //    }
         }
         return result;
     }

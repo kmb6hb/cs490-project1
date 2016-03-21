@@ -5,6 +5,9 @@
  */
 package business_logic;
 
+import business_logic.Rental.rentStatus;
+import java.util.LinkedList;
+
 /**
  *
  * @author Kris
@@ -48,7 +51,13 @@ public class Car implements Searchable<String> {
         return spec.getSize().toString();
     }
     
+    public String getSpecsID() {
+        return spec.getID();
+    }
+    
     public CarSpec getSpec(){
         return spec;
     }
+    
+
 }

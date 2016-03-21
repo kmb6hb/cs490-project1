@@ -81,7 +81,7 @@ public class ManageRentalFrame extends javax.swing.JFrame {
         find_car_table = new javax.swing.JTable();
         rent_selected_car_button = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
+        return_selected_car = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
@@ -93,6 +93,11 @@ public class ManageRentalFrame extends javax.swing.JFrame {
         customer_label.setText("Rental Account");
 
         car_search_button.setText("Search");
+        car_search_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                car_search_buttonActionPerformed(evt);
+            }
+        });
 
         find_car_table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -115,6 +120,11 @@ public class ManageRentalFrame extends javax.swing.JFrame {
         jScrollPane1.setViewportView(find_car_table);
 
         rent_selected_car_button.setText("Rent Selected");
+        rent_selected_car_button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rent_selected_car_buttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -150,7 +160,12 @@ public class ManageRentalFrame extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Find Car", jPanel2);
 
-        jButton3.setText("Return Selected");
+        return_selected_car.setText("Return Selected");
+        return_selected_car.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                return_selected_carActionPerformed(evt);
+            }
+        });
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -179,7 +194,7 @@ public class ManageRentalFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3)
+                    .addComponent(return_selected_car)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(28, Short.MAX_VALUE))
         );
@@ -187,7 +202,7 @@ public class ManageRentalFrame extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(40, 40, 40)
-                .addComponent(jButton3)
+                .addComponent(return_selected_car)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(30, Short.MAX_VALUE))
@@ -250,13 +265,24 @@ public class ManageRentalFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void car_search_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_car_search_buttonActionPerformed
+        populateCars();
+    }//GEN-LAST:event_car_search_buttonActionPerformed
+
+    private void rent_selected_car_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rent_selected_car_buttonActionPerformed
+        
+    }//GEN-LAST:event_rent_selected_car_buttonActionPerformed
+
+    private void return_selected_carActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_return_selected_carActionPerformed
+        
+    }//GEN-LAST:event_return_selected_carActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton car_search_button;
     private javax.swing.JTextField car_search_field;
     private javax.swing.JLabel customer_label;
     private javax.swing.JTable find_car_table;
-    private javax.swing.JButton jButton3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -267,5 +293,6 @@ public class ManageRentalFrame extends javax.swing.JFrame {
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
     private javax.swing.JButton rent_selected_car_button;
+    private javax.swing.JButton return_selected_car;
     // End of variables declaration//GEN-END:variables
 }
